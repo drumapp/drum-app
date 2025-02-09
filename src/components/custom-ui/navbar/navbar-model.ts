@@ -45,7 +45,7 @@ export const navbarItems: INavbarItem[] = [
         href: "/catalogue",
         subItems: [
           { title: "Produits", href: "/items" },
-          { title: "Catégories", href: "/catalogue/categories" },
+          { title: "Catégories", href: "/categories" },
           { title: "Inventaire", href: "/catalogue/inventory" },
         ],
       },
