@@ -1,5 +1,5 @@
 "use client"
-import React, { useActionState, useEffect, useRef } from 'react'
+import React, { startTransition, useActionState, useEffect, useRef } from 'react'
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
@@ -47,17 +47,17 @@ export const CreateCategoryForm = ({ onCancel }: ICreateCategoryFormProps) => {
             for (const [key, value] of formData.entries()) {
                   console.log(`${key}: ${value}`);
             }
-      
-            action(formData);
+            startTransition(() => {
+                  action(formData);
+            });
       };
 
 
       const form = useForm<CreateItemCategoryFormSchemaType>({
             resolver: zodResolver(CreateItemCategoryFormSchema),
             defaultValues: {
-                  title: "Matériel",
-                  description: "Correspond au matériel utilisé par les ouvriers",
-                  type: ItemCategoryType.Product, // Ensure this is correctly defined
+                  title: "",
+                  description: "",
             },
       })
 

@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import { UserButton } from '@/features/authentication/ui/user-button'
 import Image from 'next/image'

@@ -80,7 +80,7 @@ export const CategoriesTableColumns: ColumnDef<IItemCategoryModel, unknown>[] = 
                                           navigator.clipboard.writeText(item.$id)
                                           toast.info("L'identifiant de la catégorie a été ajouté au presse papier.")
                                     }} >Copier ID</DropdownMenuItem>
-                                    <DropdownMenuItem className="text-destructive font-semibold" onClick={() => console.log("Delete Item")}>Supprimer</DropdownMenuItem>
+                                    <DropdownMenuItem className="text-destructive font-semibold" onClick={() => console.log("Archive Item")}>Archiver</DropdownMenuItem>
                                     <DropdownMenuSeparator />
                                     <DropdownMenuItem>Détails</DropdownMenuItem>
                               </DropdownMenuContent>
